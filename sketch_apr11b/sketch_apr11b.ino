@@ -15,8 +15,8 @@ Servo myservo;  // создаем экземпляр класса «Servo»,
 static const int servoPin = 13;
 
 // вставьте здесь учетные данные своей сети:
-const char* ssid     = "";
-const char* password = "";
+char ssid[]     = "RT-GPON-0098";
+char password[] = "4P6ETT45";
 
 // создаем веб-сервер на порте «80»:
 WiFiServer server(80);
@@ -38,7 +38,7 @@ void setup() {
 
   // подключаемся к WiFi при помощи заданных выше SSID и пароля: 
   Serial.print("Connecting to ");  //  "Подключаемся к "
-  Serial.println(ssid);
+  Serial.println("RT-GPON-0098");
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
